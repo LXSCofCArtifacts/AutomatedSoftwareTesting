@@ -1,0 +1,6 @@
+14
+Calculates Euclidian distance between two colors
+DistanceCalculator.java
+calculate
+1e8c66 a34c6b
+147.68

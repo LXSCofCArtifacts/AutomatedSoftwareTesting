@@ -1,0 +1,6 @@
+20
+Calculates distance between two colors
+ContrastChecker.java
+distanceColor
+10af7d 10af7d
+0.0

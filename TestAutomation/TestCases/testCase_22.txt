@@ -1,0 +1,6 @@
+22
+Finds the contrast ratio of two colors
+ContrastChecker.java
+getContrastRatio
+123abc abc123
+4.405327061494763
