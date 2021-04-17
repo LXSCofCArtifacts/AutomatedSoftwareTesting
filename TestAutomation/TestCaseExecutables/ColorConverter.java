@@ -124,6 +124,12 @@ public final class ColorConverter {
      * @return the RGB Color from hex Color
      */
     public static Color hex2Rgb(String colorStr) {
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the other to break the code
+//        return null;
+        
+        //uncomment this if-else statement and "return null;" and comment the above return to get correct output
         if (colorStr.charAt(0) == '#') {
             String str = colorStr.substring(1);
             if (str.matches(HEXADECIMAL_DICTIONNARY)
@@ -207,19 +213,16 @@ public final class ColorConverter {
                 * (hsvTab[BRIGHTNESS] * CONSTANT_SL_COMPONENTS_HUNDRED) / CONSTANT_SL_COMPONENTS_TWO;
         float s = (hsvTab[SATURATION] * CONSTANT_SL_COMPONENTS_HUNDRED) * (hsvTab[BRIGHTNESS] * CONSTANT_SL_COMPONENTS_HUNDRED)
                 / (l < CONSTANT_S_COMPONENTS_FIFTY ? l * CONSTANT_SL_COMPONENTS_TWO : CONSTANT_S_COMPONENTS_TWO_HUNDRED - l * CONSTANT_SL_COMPONENTS_TWO);
+                
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the other to break the code
+        //return "fault"; 
+        
+        //uncomment this return statement and comment the above return to get correct output   
         return ("hsl(" + Float.valueOf(h).intValue()
                 + ", " + Float.valueOf(s).intValue() + "%"
                 + ", " + Float.valueOf(l).intValue() + "%" + ")");
     }
-    
-    
-    public static void main(String[] args){
-    	Color test;
-    	String temp = "#FFFFFF";
-    	test = Color.decode(temp);
-    	System.out.println(getBrightness(test) + "\n"+ rgb2Hsl(test) +"\n"+ rgb2Hex(test) +"\n");
-    
-    }
-    
     
 }

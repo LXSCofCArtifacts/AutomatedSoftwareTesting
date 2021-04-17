@@ -1,4 +1,4 @@
-/*
+ /*
  * Contrast Finder
  * Copyright (C) 2008-2013  Open-S Company
  *
@@ -63,7 +63,14 @@ public final class ContrastChecker {
         int greenFg = fgColor.getGreen();
         int blueFg = fgColor.getBlue();
         int blueBg = bgColor.getBlue();
-        return (Math.sqrt(Math.pow(redFg - redBg, 2) + Math.pow(greenFg - greenBg, 2) + Math.pow(blueFg - blueBg, 2)));
+        
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the other to break the code
+        //return -1; 
+        
+        //uncomment this return and comment the other to get correct output
+        return (Math.sqrt(Math.pow(redFg - redBg, 2) + Math.pow(greenFg - greenBg, 2) + Math.pow(blueFg - blueBg, 2))); 
     }
 
     /**
@@ -88,6 +95,13 @@ public final class ContrastChecker {
     public static double getConstrastRatio(final Color fgColor, final Color bgColor) {
         double fgLuminosity = getLuminosity(fgColor);
         double bgLuminosity = getLuminosity(bgColor);
+        
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the if-else to break the code
+        //return -1; 
+        
+        //uncomment this if-else statement and comment the above return to get correct output
         if (fgLuminosity > bgLuminosity) {
             return computeContrast(fgLuminosity, bgLuminosity);
         } else {
@@ -142,16 +156,5 @@ public final class ContrastChecker {
             return Math.pow(((rsgb + LUMINANCE_SUP_CONST) / LUMINANCE_SUP_CONST2), LUMINANCE_EXP);
         }
     }
-    
-    public static void main(String[] args){
-    	Color one,two;
-    	
-    	one = new Color(123,221,011);
-    	two = new Color(222,011,222);
-    	
-    	System.out.println(distanceColor(one,two)+"\n");
-    
-    }
-    
-    
+     
 }
