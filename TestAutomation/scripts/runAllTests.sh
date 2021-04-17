@@ -80,7 +80,10 @@ while read line #fill an array with the data from the test cases
 	cd ..
 	
 	#opens the result file to the browser
-	xdg-open reports/testReport.html
+	# if windows: start
+	# if linux: xdg-open
+	# if mac: open
+	start reports/testReport.html
 	
 	rm -f testCaseExecutables/*.class #clears all compiled java classes
 	
